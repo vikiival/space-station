@@ -72,7 +72,9 @@ await fetch('https://api.jup.ag/swap/v1/swap', {
     // ADDITIONAL PARAMETERS TO OPTIMIZE FOR TRANSACTION LANDING
     // See next guide to optimize for transaction landing
     dynamicComputeUnitLimit: true,
-    dynamicSlippage: true,
+    dynamicSlippage: {
+      maxBps: 300,
+    }
     prioritizationFeeLamports: {
           priorityLevelWithMaxLamports: {
             maxLamports: 1000000,
